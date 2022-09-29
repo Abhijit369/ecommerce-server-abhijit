@@ -108,7 +108,7 @@ userRoute.post("/api/order", auth, async (req, res) => {
   }
 });
 
-userRoute.get("/api/order/me", auth, async (req, res) => {
+userRoute.get("/api/orders/me", auth, async (req, res) => {
   try {
     let orders = await order.find({ userId: req.user });
     res.json(orders);
