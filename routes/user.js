@@ -73,9 +73,9 @@ userRoute.post("/api/save-user-address", auth, async (req, res) => {
 });
 
 // order product
-userRoute.post("/api/order", auth, async (req, res) => {
+userRoute.post("/api/orders", auth, async (req, res) => {
   try {
-     { cart, totalPrice, address } ''= req.body;
+    const { cart, totalPrice, address } = req.body;
     let products = [];
     for (let i = 0; i < cart.length; i++) {
       let product = await Product.findById(cart[i].product._id);
