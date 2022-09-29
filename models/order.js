@@ -19,8 +19,8 @@ const orderSchema = mongoose.Schema({
     required: true,
   },
   userId: {
-    required: true,
     type: String,
+    required: true,
   },
   orderedAt: {
     type: Number,
